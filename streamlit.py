@@ -22,7 +22,7 @@ def extract_breed_name(file_name):
     return final_breed_name
 
 def predict(image):
-    img = PIlImage.create(image)
+    img = PILImage.create(image)
     pred_class, pred_idx, outputs = breed_model.predict(img)
     return pred_class
 

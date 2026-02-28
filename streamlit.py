@@ -28,7 +28,7 @@ def predict(image):
     pred_class, pred_idx, outputs = breed_model.predict(img)
     return pred_class
 
-breed_model = load_learner("cat_dog_breed_model_2.8.4.pkl")
+breed_model = load_learner("cat_dog_breed_model_2.8.4 (1).pkl")
 
 uploaded_file = st.file_uploader("Upload an image...", type=["jpg", "png", "jpeg"])
 

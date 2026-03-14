@@ -7,6 +7,7 @@ st.title("Pet Breed Classification")
 st.text("Built by Joel Suwanto")
 
 
+
 def extract_breed_name(file_name):
     p = Path(file_name)
     breed_name_parts = p.stem.split("_")
@@ -20,7 +21,7 @@ def extract_breed_name(file_name):
 
     return final_breed_name
 
-single_digit_model = load_learner("cat_dog_breed_model.pkl")
+breed_model = load_learner("cat_dog_breed_model.pkl")
 
 
 def predict(image):

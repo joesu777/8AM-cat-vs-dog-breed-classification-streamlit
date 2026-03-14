@@ -6,20 +6,17 @@ from pathlib import Path
 st.title("Pet Breed Classification")
 st.text("Built by Joel Suwanto")
 
+
 def extract_breed_name(file_name):
-    #stafford_bull_terrier_100.jpg
-    #["stafford", "bull", "terrier", "100.jpg"]
-    #[abyssinian, "100.jpg"]
     p = Path(file_name)
-    #stafford_bull_terrier_100.jpg
     breed_name_parts = p.stem.split("_")
     final_breed_name = ""
+    # breed_name_parts.pop()
     length_parts = len(breed_name_parts) - 1
     for i in range(length_parts):
-        breed_name_part = breed_name_parts[i]
-        final_breed_name += breed_name_part
-        if i != length_parts-1:
-          final_breed_name += "_"
+        final_breed_name += breed_name_parts[i]
+        if i != length_parts - 1:
+            final_breed_name += "_"
 
     return final_breed_name
 

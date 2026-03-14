@@ -20,6 +20,9 @@ def extract_breed_name(file_name):
 
     return final_breed_name
 
+single_digit_model = load_learner("cat_dog_breed_model.pkl")
+
+
 def predict(image):
     img = PILImage.create(image)
     pred_class, pred_idx, outputs = breed_model.predict(img)

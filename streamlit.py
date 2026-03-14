@@ -6,8 +6,6 @@ from pathlib import Path
 st.title("Pet Breed Classification")
 st.text("Built by Joel Suwanto")
 
-
-
 def extract_breed_name(file_name):
     p = Path(file_name)
     breed_name_parts = p.stem.split("_")
